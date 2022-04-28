@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import getWeatherInfo from "../redux/weather/weatherAction";
+import { sendWeatherRequest } from "../redux/weather/weatherAction";
+// import getWeatherInfo from "../redux/weather/weatherAction";
 import PersianDate from "./PersianDate";
 
 const Weather = () => {
@@ -13,9 +14,9 @@ const Weather = () => {
 
   const handleGetWeather = (e) => {
     e.preventDefault();
-    dispatch(getWeatherInfo(query));
+    // dispatch(getWeatherInfo(query));
+    dispatch(sendWeatherRequest(query));
     setQuery("");
-    console.log(data);
   };
 
   useEffect(() => {
@@ -40,7 +41,7 @@ const Weather = () => {
             <input
               type="text"
               className="search_input w-100 text_color placeholder_color"
-              placeholder={data.name || "نام شهر یا کشور"}
+              placeholder="نام شهر یا کشور"
               value={query}
               onChange={(e) => {
                 setQuery(e.target.value);
@@ -69,14 +70,17 @@ const Weather = () => {
           <div className="row justify-content-center py-3">
             <div className="col-9 col-md-6 col-lg-4 col-xl-3">
               <div className="temprature_box justify-content-center pt-3">
-                <span>{Math.round(data.main.temp)}</span>C°
+                <span>{Math.round(data.main.temp)} C°</span>
               </div>
             </div>
           </div>
 
           <div className="row justify-content-center py-3 pt-4">
             <div className="col-11 col-md-8 col-lg-4 col-xl-3">
-              <h1 className="text-center fa-3x lathin_text text_color">
+              <span className="temprature_box justify-content-center pt-3">
+                {data.name}
+              </span>
+              <h1 className="text-center fa-3x lathin_text text_color pt-4">
                 {data.weather[0].main}
               </h1>
             </div>

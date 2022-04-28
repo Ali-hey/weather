@@ -29,7 +29,7 @@ body {
 .lathin_text {
   font-family: Arial, Helvetica, sans-serif;
   font-weight: bold;
-  color: darkgreen;
+  color: darkturquoise;
 }
 
 .h_fit {
@@ -94,30 +94,34 @@ body {
 }
 
 .temprature_box {
+  font-size: 30px;
+  font-weight: bold;
   border: solid 1px;
-  border-radius: 20px;
+  border-radius: 10px;
   width: 200px;
   height: 80px;
   padding: 10px;
   margin: 0 auto;
-  background: #02aab0; /* fallback for old browsers */
+  background: #2980b9; /* fallback for old browsers */
   background: -webkit-linear-gradient(
     to right,
-    #00cdac,
-    #02aab0
+    #ffffff,
+    #6dd5fa,
+    #2980b9
   ); /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(
     to right,
-    #00cdac,
-    #02aab0
+    #ffffff,
+    #6dd5fa,
+    #2980b9
   ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  opacity: 0.6;
+  opacity: 0.8;
   direction: ltr;
 }
 
 .temprature_box span {
   font-size: 30px;
- font-weight: bold;
+  font-weight: bold;
 }
 
 ::-webkit-input-placeholder {
@@ -149,9 +153,11 @@ body {
   font-size: large;
 }
 
-.search_input{
+.search_input {
   background: none;
   outline-style: none;
- border-inline-style: none;
+  border-inline-style: none;
   border-radius: 20px;
+  color: aliceblue;
+  font-size: large;
 }
