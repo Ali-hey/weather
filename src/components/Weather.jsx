@@ -40,7 +40,7 @@ const Weather = () => {
           <form onSubmit={handleGetWeather}>
             <input
               type="text"
-              className="search_input w-100 text_color placeholder_color"
+              className="search_input auth_box w-100 text_color placeholder_color"
               placeholder="نام شهر یا کشور"
               value={query}
               onChange={(e) => {
@@ -69,7 +69,7 @@ const Weather = () => {
         <>
           <div className="row justify-content-center py-3">
             <div className="col-9 col-md-6 col-lg-4 col-xl-3">
-              <div className="temprature_box justify-content-center pt-3">
+              <div className="temprature_box auth_box justify-content-center pt-3">
                 <span>{Math.round(data.main.temp)} C°</span>
               </div>
             </div>
@@ -77,7 +77,7 @@ const Weather = () => {
 
           <div className="row justify-content-center py-3 pt-4">
             <div className="col-11 col-md-8 col-lg-4 col-xl-3">
-              <span className="temprature_box justify-content-center pt-3">
+              <span className="temprature_box auth_box justify-content-center pt-3">
                 {data.name}
               </span>
               <h1 className="text-center fa-3x lathin_text text_color pt-4">
